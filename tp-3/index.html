@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TP3 - Especificidad CSS</title>
+	<link rel="stylesheet" type="text/css" href="tp-03.css">
+	<style type="text/css">
+		body {
+			font-size: 18px;
+			background-color: #ffe;
+			color: #210;
+		}
+
+		#contenedor {
+			max-width: 40ch;
+			margin: 2rem auto;
+			padding: 1rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+			text-align: left;
+		}
+
+		p {
+			font-family: sans-serif;
+		}
+
+		#primer-parrafo {
+			font-size: 1.3rem;
+			background-color: #eec;
+		}
+
+		p.importante em {
+			font-weight: bold;
+			color: #144;
+		}
+
+		p.novelas a {
+			outline: none;
+			text-decoration: none;
+		}
+		p.novelas a:hover {
+			text-decoration: underline;
+			background-color: #ccd;
+		}
+
+		body p.fuente.parrafo {
+			color: #999 !important;
+			font-size: 0.9rem;
+			opacity: 75%;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<article id="contenedor">
+		<h1 class="titulo">Sherlock Holmes</h1>
+		
+		<p id="primer-parrafo" class="importante parrafo">
+			Sherlock Holmes es un detective ficticio creado por el escritor británico <em>Arthur Conan Doyle</em>.  
+			Es uno de los personajes más famosos de la literatura policial.
+		</p>
+		
+		<p class="novelas parrafo">
+			Protagoniza cuatro novelas y cincuenta y seis relatos cortos, entre ellos 
+			<a href="https://es.wikipedia.org/wiki/Estudio_en_escarlata">Estudio en escarlata</a> y 
+			<a href="https://es.wikipedia.org/wiki/El_perro_de_los_Baskerville">El perro de los Baskerville</a>, 
+			además de aparecer en numerosas adaptaciones cinematográficas y televisivas.
+		</p>
+	</article>
+
+	<p class="fuente parrafo">
+		Fuente: <a href="https://es.wikipedia.org/wiki/Sherlock_Holmes">https://es.wikipedia.org/wiki/Sherlock_Holmes</a>
+	</p>
+</body>
+</html>
